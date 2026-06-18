@@ -1,3 +1,34 @@
+/*
+1. Sort the Array
+Description
+You are given an integer array A of size N containing only 1, 2, and 3. You are also given an
+integer Q and a 2D array of queries.
+You have to answer Q queries:
+• For the ith query, perform A[queries[i][0]] = queries[i][1] and determine the minimum
+number of swaps required to sort the array in non-decreasing order.
+Task
+For each query, determine the minimum swaps required to sort the array in non-decreasing order.
+Note: Array A and queries follow 0-based indexing.
+Example
+Assumptions:
+• N =5
+• A=[1,2,3,1,2]
+• Q=2
+• queries = [[1,3],[3,3]]
+Approach:
+1. After the first update (A[1] = 3), the array A becomes [1, 3, 3, 1, 2].
+• Swap indices 1 and 3.
+• Swap indices 2 and 4.
+The minimum swaps required would be 2.
+2. After the second update, the array A becomes [1, 3, 3, 3, 2].
+• Swap indices 1 and 4.
+The minimum swaps required is 1.
+*/
+
+/*
+LEETCODE : 75. Sort Colors
+*/
+
 #include<iostream>
 #include<bits/stdc++.h>
 
@@ -97,3 +128,6 @@ int main() {
     s.sortArray(nums , query);
     return 0;
 };
+
+
+
